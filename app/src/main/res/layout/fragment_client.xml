@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimary"
+
+    >
+
+  <!-- prevent from receiving focus -->
+  <LinearLayout
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:layout_width="0px"
+      android:layout_height="0px"/>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true"
+
+      android:clipToPadding="false"
+      android:paddingBottom="50dp"
+
+      >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_client"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.josemontiel.clientmanager.ClientActivityFragment"
+        tools:showIn="@layout/activity_client"
+        >
+
+      <LinearLayout
+          android:id="@+id/labels_name_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+
+        <TextView
+            android:id="@+id/label_client_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif"
+            android:text="@string/first_name"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/label_client_last"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif"
+            android:text="@string/last_name"
+            android:textSize="14sp"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/form_client_name_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_below="@+id/labels_name_container"
+          android:layout_marginBottom="8dp"
+          >
+
+        <EditText
+            android:id="@+id/form_client_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif"
+            android:hint="John"
+            android:maxLines="1"
+            android:textSize="20sp"
+            style="@style/AppTheme.EditText"
+            />
+
+        <EditText
+            android:id="@+id/form_client_last"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif"
+            android:hint="Doe"
+            android:maxLines="1"
+            android:textSize="20sp"
+            style="@style/AppTheme.EditText"
+            />
+
+      </LinearLayout>
+
+
+      <TextView
+          android:id="@+id/label_client_phone"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:layout_weight="0.5"
+          android:fontFamily="sans-serif"
+          android:text="@string/phone_number"
+          android:textSize="14sp"
+          android:layout_below="@id/form_client_name_container"
+          />
+
+
+      <EditText
+          android:id="@+id/form_client_phone"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/label_client_phone"
+          android:layout_marginTop="4dp"
+          android:fontFamily="sans-serif-light"
+          android:inputType="phone"
+          android:hint="(xxx) xxxx-xxx"
+          android:textSize="20sp"
+          android:maxLines="1"
+          android:layout_marginBottom="8dp"
+          style="@style/AppTheme.EditText"
+          />
+
+      <TextView
+          android:id="@+id/label_client_dob"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:fontFamily="sans-serif"
+          android:text="@string/date_of_birth"
+          android:textSize="14sp"
+          android:layout_below="@id/form_client_phone"
+          />
+
+      <EditText
+          android:id="@+id/form_client_dob"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/label_client_dob"
+          android:layout_marginTop="4dp"
+          android:hint="mm/dd/yyyy"
+          android:fontFamily="sans-serif-light"
+          android:textSize="20sp"
+          android:maxLines="1"
+          android:clickable="false"
+          android:focusable="false"
+          android:focusableInTouchMode="false"
+          android:layout_marginBottom="8dp"
+          style="@style/AppTheme.EditText"
+          />
+
+      <TextView
+          android:id="@+id/label_client_zip"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:fontFamily="sans-serif"
+          android:text="@string/zip_code"
+          android:textSize="14sp"
+          android:layout_below="@id/form_client_dob"
+          />
+
+      <EditText
+          android:id="@+id/form_client_zip"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/label_client_zip"
+          android:layout_marginTop="4dp"
+          android:hint="12345"
+          android:inputType="number"
+          android:maxLines="1"
+          android:fontFamily="sans-serif-light"
+          android:textSize="20sp"
+          style="@style/AppTheme.EditText"
+          />
+
+
+
+    </RelativeLayout>
+  </ScrollView>
+
+
+
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_gravity="bottom"
+      android:textColor="@android:color/white"
+      android:text="@string/save"
+      android:fontFamily="sans-serif-light"
+      android:background="@color/colorAccent"
+      android:textSize="24sp"
+      android:id="@+id/form_save_btn"
+      android:visibility="invisible"
+      />
+
+</FrameLayout>
+

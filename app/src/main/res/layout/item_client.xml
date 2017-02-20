@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    >
+
+  <TextView
+      android:id="@+id/item_client_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="sans-serif"
+      android:layout_toStartOf="@+id/item_client_call"
+      android:layout_marginEnd="8dp"
+      android:textSize="20sp"
+      />
+
+
+  <TextView
+      android:id="@+id/item_client_phone"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/item_client_name"
+      android:layout_marginTop="4dp"
+      android:fontFamily="sans-serif-light"
+      android:layout_toStartOf="@+id/item_client_call"
+      android:textSize="16sp"
+      />
+
+  <TextView
+      android:id="@+id/item_client_dob"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/item_client_phone"
+      android:layout_marginTop="4dp"
+      android:fontFamily="sans-serif-light"
+      android:layout_toStartOf="@+id/item_client_call"
+      android:textSize="16sp"
+      />
+
+  <TextView
+      android:id="@+id/item_client_zip"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/item_client_dob"
+      android:layout_marginTop="4dp"
+      android:fontFamily="sans-serif-light"
+      android:layout_toStartOf="@+id/item_client_call"
+      android:textSize="16sp"
+      />
+
+  <Button
+      android:id="@+id/item_client_call"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/title_call"
+      android:layout_alignParentEnd="true"
+      android:backgroundTint="@color/colorPrimary"
+      style="@style/AppTheme.Button"/>
+
+</RelativeLayout>
